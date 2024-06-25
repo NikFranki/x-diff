@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image';
-import { Layout, Page, Text, List, Code } from '@vercel/examples-ui'
-import { Button } from '@acme/ui'
+import { Layout } from '@vercel/examples-ui'
 import { matchingTextColor, randomColor } from '@acme/utils'
+
+// @ts-ignore
 import XDiff from '@franki/x-diff';
+
 import { FaGithub } from 'react-icons/fa'
 
 import Snippet from './snippet'
@@ -87,7 +89,7 @@ const after = { a: [{ id: 1, b: 1 }, { id: 4, b: 4 }] };
 const result = diff(before, after);`
 
   return (
-    <Page>
+    <div className={styles.container}>
       <main className={styles.main}>
         <div className={styles.mainWrapper}>
           <div className={styles.intro}>
@@ -182,42 +184,7 @@ const result = diff(before, after);`
           <div className={styles.authorDesc}>A guy who loves to create something special.</div>
         </div>
       </footer>
-
-      <Text variant="h1" className="mb-6">
-        Monorepo
-      </Text>
-      <Text className="mb-4">
-        In this monorepo app we have a single site with two installed
-        dependencies that are available in the same repository.
-      </Text>
-      <List className="mb-4">
-        <li>
-          <Code>app</Code> is the current Next.js site you&apos;re looking at
-        </li>
-        <li>
-          <Code>packages/ui</Code> is a package that exports the button you see
-          below
-        </li>
-        <li>
-          <Code>packages/utils</Code> is a package that exports a function that
-          generates random colors. Click the button to see it in action
-        </li>
-      </List>
-      {bgColor && textColor && (
-        <>
-          <Button
-            style={{
-              backgroundColor: bgColor,
-              color: textColor,
-              borderColor: textColor,
-            }}
-            onClick={changeColor}
-          >
-            Change Color
-          </Button>
-        </>
-      )}
-    </Page>
+    </div>
   )
 }
 

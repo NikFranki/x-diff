@@ -28,10 +28,7 @@
     ]
   },
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/NikFranki/x-diff"
-  },
+  "repository": "https://github.com/NikFranki/x-diff",
   "keywords": [
     "diff",
     "object",

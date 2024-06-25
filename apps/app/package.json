@@ -1,7 +1,7 @@
 {
   "name": "app",
   "version": "0.0.0",
-  "repository": "https://github.com/vercel/examples.git",
+  "repository": "https://github.com/NikFranki/x-diff",
   "license": "MIT",
   "private": true,
   "scripts": {
