@@ -12,6 +12,7 @@
     }
   ],
   "scripts": {
+    "dev": "pnpm build --watch",
     "build": "rimraf -rf lib esm dist && rollup --config ./rollup.config.mjs --environment NODE_ENV:production",
     "test": "jest"
   },
