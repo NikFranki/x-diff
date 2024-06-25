@@ -2,10 +2,7 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image';
 import { Layout } from '@vercel/examples-ui'
 import { matchingTextColor, randomColor } from '@acme/utils'
-
-// @ts-ignore
 import XDiff from '@franki/x-diff';
-
 import { FaGithub } from 'react-icons/fa'
 
 import Snippet from './snippet'
@@ -19,14 +16,13 @@ import twoObjectArrayByPrimaryKeyDiffResultImg from '../images/twoObjectArrayByP
 
 import styles from '../styles/Home.module.css'
 
-console.log('XDiff: ', XDiff)
-const { diff } = new XDiff()
-const result = diff({a: 1}, {a: 2})
-console.log('result: ', result)
-
 export default function Index() {
   const [bgColor, setBgColor] = useState('')
   const [textColor, setTextColor] = useState('')
+
+  const { diff } = new XDiff()
+  console.log('diff: ', diff)
+
   const changeColor = () => {
     const bg = randomColor()
     setBgColor(bg)
