@@ -1,0 +1,58 @@
+{
+  "name": "@franki/x-diff",
+  "version": "1.0.1",
+  "description": "A light toolkit to diff Object.",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "browser": "dist/x-diff.umd.js",
+  "maintainers": [
+    {
+      "name": "NikFranki",
+      "email": "8024ldbryant@gmail.com"
+    }
+  ],
+  "scripts": {
+    "build": "rimraf -rf lib esm dist && rollup --config ./rollup.config.mjs --environment NODE_ENV:production",
+    "test": "jest"
+  },
+  "files": [
+    "dist",
+    "esm",
+    "lib"
+  ],
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": [
+      "./src/*.ts",
+      "./src/*/index.ts"
+    ]
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NikFranki/x-diff"
+  },
+  "keywords": [
+    "diff",
+    "object",
+    "light",
+    "fast",
+    "simple",
+    "scalable"
+  ],
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.18.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "ts-jest": "^29.1.5",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "tslib": "^2.6.2"
+  }
+}
