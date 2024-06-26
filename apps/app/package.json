@@ -14,6 +14,7 @@
     "@acme/ui": "workspace:*",
     "@acme/utils": "workspace:*",
     "@franki/eslint-config": "workspace:*",
+    "@franki/tsconfig": "workspace:*",
     "@franki/x-diff": "workspace:*",
     "@vercel/examples-ui": "^1.0.4",
     "next": "canary",

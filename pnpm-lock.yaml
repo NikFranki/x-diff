@@ -29,6 +29,9 @@ importers:
       '@franki/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
+      '@franki/tsconfig':
+        specifier: workspace:*
+        version: link:../../packages/tsconfig
       '@franki/x-diff':
         specifier: workspace:*
         version: link:../../packages/diff-kit
@@ -85,6 +88,9 @@ importers:
       '@franki/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
+      '@franki/tsconfig':
+        specifier: workspace:*
+        version: link:../tsconfig
       '@rollup/plugin-commonjs':
         specifier: ^25.0.7
         version: 25.0.8(rollup@4.18.0)
@@ -142,6 +148,8 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.5.2
+
+  packages/tsconfig: {}
 
   packages/ui:
     dependencies:
