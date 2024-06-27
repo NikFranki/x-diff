@@ -14,7 +14,6 @@
   max-width: 64rem;
   margin-left: auto;
   margin-right: auto;
-  padding: 2rem 0;
   border: 1px solid #e5e7eb;
   background-color: #fff;
 }
@@ -143,4 +142,45 @@
 
 .defaultDiffConfig h3, .customDiffConfig h3 {
   margin-top: 0;
+}
+
+.api {
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 0;
+  border: 1px solid #e5e7eb;
+  border-top: none;
+  background-color: #fff;
+}
+
+.apiWrapper {
+  padding: 0 3rem;
+}
+
+.apiWrapper table {
+  width: 100%;
+  table-layout: auto;
+  text-align: left;
+  margin-top: 16px;
+  font-size: 14px;
+  border-collapse: collapse;
+  line-height: 1.7142857;
+}
+
+.apiWrapper table thead th {
+  padding-bottom: 8px;
+}
+
+.apiWrapper table thead th:first-child {
+  width: 150px;
+}
+
+.apiWrapper table tbody tr:not(:last-child) {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.apiWrapper table tbody tr td {
+  padding: 8px;
+  padding-left: 0;  
 }
