@@ -13,7 +13,10 @@
   ],
   "scripts": {
     "dev": "pnpm build --watch",
+    "tsc-build": "rm -fr dist/* && tsc",
     "build": "rimraf -rf lib esm dist && rollup --config ./rollup.config.mjs --environment NODE_ENV:production",
+    "lint": "eslint \"src/**/*.ts*\"",
+    "clean": "rimraf -rf .turbo lib esm dist",
     "test": "jest"
   },
   "files": [
@@ -39,6 +42,8 @@
     "scalable"
   ],
   "devDependencies": {
+    "@franki/eslint-config": "workspace:*",
+    "@franki/tsconfig": "workspace:*",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^15.2.3",
