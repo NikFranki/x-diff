@@ -172,6 +172,42 @@ const result = diff(before, after);`
             </div>
           </div>
         </div>
+
+        {/* API Description */}
+        <div className={styles.api}>
+          <div className={styles.apiWrapper}>
+            <div>API</div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>XDiff</td>
+                  <td>
+                    <div>exported constructor</div>
+                    <div>default configuration is {JSON.stringify({ basicTypeArrayStrictDiff: true, pointedArrayKeyDiffOrder: [], ignoreKeys: [] })}</div>
+                    <div>custom configuration is like {JSON.stringify({ basicTypeArrayStrictDiff: false, pointedArrayKeyDiffOrder: ['a[{}].id'], ignoreKeys: ['name'], })}</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>diff</td>
+                  <td>
+                    <div>diff two object, include before object and after object</div>
+                    <div>support simple or nested object, will corresponse the deepest property</div>
+                    <div>if basicTypeArrayStrictDiff of constructor configuration param is true, diff two array by strict(one by one) strategy</div>
+                    <div>if basicTypeArrayStrictDiff of constructor configuration param is false, diff two array by loose(ignore same content) strategy</div>
+                    <div>if pointedArrayKeyDiffOrder of constructor configuration param is false, diff two object by strict(one by one) strategy</div>
+                    <div>if pointedArrayKeyDiffOrder of constructor configuration param is false, diff two object by loose(same primary key row diff) strategy</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </main>
 
       <footer className={styles.footer}>
