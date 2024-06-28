@@ -51,6 +51,7 @@ export default {
           module: 'ESNext',
           declaration: true,
         },
+        exclude: ["**/tests/"],
       },
     }),
     commonjs(),

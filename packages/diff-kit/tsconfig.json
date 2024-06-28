@@ -1,6 +1,6 @@
 {
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "**/tests/"],
+  "include": ["src/**/*.ts", "**/tests/"],
+  "exclude": ["node_modules"],
   "extends": "@franki/tsconfig/base.json",
   "compilerOptions": {
     "baseUrl": "./",
