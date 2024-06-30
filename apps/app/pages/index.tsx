@@ -7,6 +7,7 @@ import { FaGithub } from 'react-icons/fa'
 
 import Snippet from './snippet'
 import CodeBlock from './code-block'
+import Playground from './playground'
 import twoBasicObjectDiffResultImg from '../images/twoBasicObjectDiffResult.png'
 import twoBasicTypeArrayDiffResultImg from '../images/twoBasicTypeArrayDiffResult.png'
 import twoComplexDataDiffResultImg from '../images/twoComplexDataDiffResult.png'
@@ -21,7 +22,6 @@ export default function Index() {
   const [textColor, setTextColor] = useState('')
 
   const { diff } = new XDiff()
-  console.log('diff: ', diff)
 
   const changeColor = () => {
     const bg = randomColor()
@@ -207,6 +207,12 @@ const result = diff(before, after);`
               </tbody>
             </table>
           </div>
+        </div>
+
+        {/* Playground */}
+        <div className={styles.playground}>
+          <h3>Playground</h3>
+          <Playground />
         </div>
       </main>
 

@@ -112,7 +112,8 @@
   cursor: pointer;
 }
 
-.pnpmInstallation, .npmInstallation {
+.pnpmInstallation,
+.npmInstallation {
   margin-bottom: 24px;
 }
 
@@ -137,10 +138,11 @@
 }
 
 .codeBlockContent svg {
-  cursor: pointer;  
+  cursor: pointer;
 }
 
-.defaultDiffConfig h3, .customDiffConfig h3 {
+.defaultDiffConfig h3,
+.customDiffConfig h3 {
   margin-top: 0;
 }
 
@@ -182,5 +184,30 @@
 
 .apiWrapper table tbody tr td {
   padding: 8px;
-  padding-left: 0;  
+  padding-left: 0;
+}
+
+.playground {
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 0;
+  border: 1px solid #e5e7eb;
+  border-top: none;
+  background-color: #fff;
+}
+
+.playground h3 {
+  padding-left: 16px;
+}
+
+.playgroundWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+  padding: 16px;
+}
+
+.playgroundWrapper textarea {
+  padding: 8px;
 }
